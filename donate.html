@@ -7,32 +7,84 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Nerko+One&display=swap" rel="stylesheet">
-    <title>title</title>
+    <title>Donate</title>
 </head>
-<body style="background-color: #EFF0FF;">
-    <div class="sidebar-wrapper">
-        <div class="sidebar-inner">
-            <div class="logo">
-                <h1>NFT Platform</h1>
+<body style="background-color: #F1F5F9;">
+    <div class="main-grid">
+        <div class="sidebar-wrapper">
+            <div class="sidebar-inner">
+                <div class="logo">
+                    <h1>NFT Platform</h1>
+                </div>
+                <div class="navigation">
+                    <div class="nav-element selected" onclick="window.location.href = '/donate.html';">
+                        <img src="img/donate.svg">
+                        Donate
+                    </div>
+                    <div class="nav-element" onclick="window.location.href = '/report.html';">
+                        <img src="img/report.svg">
+                        Report
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="nav-element" onclick="window.location.href = '/';">
+                        <div>
+                            <img src="img/exit.svg">
+                            Exit
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="navigation">
-                <div class="nav-element">
-                    Donate
+        </div>
+        
+        <div class="column" style="width: 100%;">
+            <div class="header-wrapper">
+                <div class="header-inner">
+                    <div class="header-titles">
+                        <div class="header-title">Connected Wallets</div>
+                        <div class="header-networks">
+                            <a id="networkAll" class="network selected">ALL</a>
+                            <span>|</span>
+                            <a id="networkETH" class="network">ETH</a>
+                            <span>|</span>
+                            <a id="networkSOL" class="network">SOL</a>
+                        </div>
+                    </div>
+                    <div class="header-wallets">
+                        <div id="connectETH" class="wallet">
+                            <img src="img/metamask.png">
+                            Connect Wallet
+                        </div>
+                        <div id="disconnectETH" class="wallet" style="display: none;">
+                            <img src="img/metamask.png">
+                            <a id="walletETH">0x0000...0000</a>
+                            <span>🗙</span>
+                        </div>
+                        <div id="connectSOL" class="wallet">
+                            <img src="img/phantom.jpg">
+                            Connect Wallet
+                        </div>
+                        <div id="disconnectSOL" class="wallet" style="display: none;">
+                            <img src="img/phantom.jpg">
+                            <a id="walletSOL">000000...000000</a>
+                            <span>🗙</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-element">
-                    Reports
-                </div>
-                <div class="nav-element">
-                    Wallets
-                </div>
-                <div class="nav-element">
-                    Settings
+            </div>
+
+            <div class="content-grid-wrapper">
+                <div id="content" class="content-grid-inner">
+                    
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js" defer></script>
+    <script src="axios.min.js" defer></script>
+    <script src="require.js" defer></script>
+    <script src="donate.js" type="module" defer></script>
 </body>
 </html>

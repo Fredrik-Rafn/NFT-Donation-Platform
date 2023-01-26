@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI = "mongodb+srv://selfmade1337:sHYqItthsaVFDEgx@nationsxi.xxw7g.mongodb.net/nft-donation";
+const MONGO_URI = "database-here";
 
 exports.connect = () => {
     // Connecting to the database
